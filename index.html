@@ -290,7 +290,7 @@
               Coin<br>
               <input id="coinSearch" type="text" class="search-input" placeholder="Ara..." onkeyup="searchCoin()" onclick="event.stopPropagation()">
             </th>
-            <th onclick="sortTable(2)">3 Aylık Dip Fiyatı</th>
+            <th onclick="sortTable(2)">9 Aylık Dip Fiyatı</th>
             <th onclick="sortTable(3)">Fiyat</th>
             <th onclick="sortTable(4)">Dipten Artış</th>
             <th onclick="sortTable(5)">
@@ -385,7 +385,7 @@ loadCoinList();
       loadingBar.style.width = '0%';
     }
 
-    const months = 3; // 3 ay sabit olarak ayarlandı
+    const months = 9; // 9 ay sabit olarak ayarlandı
     fetch('https://api.binance.com/api/v3/ticker/24hr').then(r=>r.json()).then(data=>{
       const map24 = new Map(data.map(d=>[d.symbol,d]));
       return Promise.all(coinList.map(name=>
